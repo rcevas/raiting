@@ -1,0 +1,36 @@
+
+.stars {
+    direction: rtl;
+    font-size: 3rem;
+    color: #ccc;
+    counter-reset: countStars 0;    
+}
+
+
+label:hover, label:hover~label {
+    color: gold;    
+}
+
+.active {
+    color: gold;  
+}
+
+.fas.active {
+    counter-increment: countStars 1;
+}
+
+.rating::after {
+    content: counter(countStars) '/5';
+    margin-left: 50px;
+}
+
+.rating {
+    font-size: 3rem;
+    color: black;
+    display: inline-flex;    
+}
+
+
+
+
+
